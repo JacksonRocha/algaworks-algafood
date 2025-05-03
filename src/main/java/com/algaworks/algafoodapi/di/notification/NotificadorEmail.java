@@ -1,16 +1,12 @@
 package com.algaworks.algafoodapi.di.notification;
 
 import com.algaworks.algafoodapi.di.model.Cliente;
+import org.springframework.stereotype.Component;
 
+@Component
 public class NotificadorEmail implements Notificador {
 
     private boolean caixaAlta;
-    private String hostServidorSmtp;
-
-    public NotificadorEmail(String hostServidorSmtp) {
-        this.hostServidorSmtp = hostServidorSmtp;
-        System.out.println("NotificadorEmail: criando um novo objeto");
-    }
 
     @Override
     public void notificar(Cliente cliente, String mensagem) {
@@ -18,11 +14,8 @@ public class NotificadorEmail implements Notificador {
             mensagem = mensagem.toUpperCase();
         }
 
-        System.out.printf("Notificando %s através do e-mail %s usando SMTP %s: %s\n",
-                cliente.getNome(), cliente.getEmail(), this.hostServidorSmtp, mensagem);
+        System.out.printf("Notificando %s através do e-mail %s: %s\n",
+                cliente.getNome(), cliente.getEmail(), mensagem);
     }
 
-    public void setCaixaAlta(boolean caixaAlta) {
-        this.caixaAlta = caixaAlta;
-    }
 }
