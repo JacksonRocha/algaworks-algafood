@@ -24,7 +24,7 @@ public class Cozinha {
         this.id = id;
     }
 
-    public String nome() {
+    public String getNome() {
         return nome;
     }
 
