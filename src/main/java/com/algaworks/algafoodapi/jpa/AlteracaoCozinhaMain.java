@@ -22,7 +22,7 @@ public class AlteracaoCozinhaMain {
 
         cadastroCozinha.salvar(cozinha);
         System.out.println("Cozinha alterada com sucesso!");
-        System.out.println("ID: " + cozinha.id());
+        System.out.println("ID: " + cozinha.getId());
         System.out.println("Nome: " + cozinha.getNome());
     }
 }
