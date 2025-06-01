@@ -1,9 +1,6 @@
 package com.algaworks.algafoodapi.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,4 +15,7 @@ public class Cozinha {
     private Long id;
 
     private String nome;
+
+    @ManyToOne
+    private Restaurante restaurante;
 }
