@@ -16,8 +16,4 @@ public class Cozinha {
 
     @Column(nullable = false)
     private String nome;
-
-    @ManyToOne
-    @JoinColumn(name = "restaurante_id", nullable = false)
-    private Restaurante restaurante;
 }
